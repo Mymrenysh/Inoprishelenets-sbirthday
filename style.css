@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #efefef; 
+    font-family: 'EB Garamond', serif;
+    color: #1a1a1a;
+    padding: 40px 20px;
+    line-height: 1.45;
+}
+
+.newspaper-container {
+    background-color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+    border: 1px solid #ccc;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Газетные линии */
+.divider {
+    border-top: 2px solid #000;
+    border-bottom: 1px solid #000;
+    height: 5px;
+    margin: 12px 0;
+}
+
+.mt-20 { margin-top: 20px; }
+
+/* Логотип газеты */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-title {
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: 85px;
+    line-height: 0.9;
+    margin-bottom: 8px;
+}
+
+.header-info {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 0 2px;
+}
+
+/* Заголовки */
+.happy-birthday-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 58px;
+    text-align: center;
+    letter-spacing: -1px;
+    margin: 30px 0 5px;
+    font-weight: 900;
+}
+
+.to-friend-cursive {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 44px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+/* Двухколоночная верстка */
+.article-content {
+    display: flex;
+    gap: 30px;
+    text-align: justify;
+}
+
+.left-column, .right-column {
+    flex: 1;
+}
+
+/* Оформление фото (Цветные) */
+.photo-wrapper {
+    border: 1px solid #000;
+    padding: 4px;
+    margin-bottom: 15px;
+    background: #fff;
+}
+
+.main-photo, .side-photo {
+    width: 100%;
+    display: block;
+}
+
+/* Буквица */
+.drop-cap {
+    float: left;
+    font-size: 52px;
+    line-height: 42px;
+    padding-top: 4px;
+    padding-right: 8px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 17.5px;
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-msg {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    letter-spacing: 8px;
+    margin-top: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Адаптивность */
+@media (max-width: 650px) {
+    .article-content { flex-direction: column; }
+    .main-title { font-size: 50px; }
+    .happy-birthday-title { font-size: 38px; }
+    .to-friend-cursive { font-size: 28px; }
+    .newspaper-container { padding: 25px; }
+}
+.signature {
+    text-align: right; /* Выравнивание текста по правому краю */
+    margin-top: 10px;  /* Небольшой отступ сверху */
+    font-style: italic; /* Можно добавить курсив для стиля */
+    font-weight: bold;  /* И сделать жирным, чтобы выделить */
+}
