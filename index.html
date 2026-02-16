@@ -49,8 +49,38 @@
 
         <footer>
             <div class="divider"></div>
+            <button id="music-btn" class="music-control">PLAY MUSIC 🔈</button>
             <h3 class="footer-msg">HAPPY BIRTHDAY</h3>
         </footer>
     </div>
+        <audio id="birthday-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает аудио.
+    </audio>
+
+    <script>
+        const audio = document.getElementById('birthday-music');
+        const btn = document.getElementById('music-btn');
+
+        // Логика кнопки
+        btn.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+                btn.textContent = "STOP MUSIC 🔇";
+            } else {
+                audio.pause();
+                btn.textContent = "PLAY MUSIC 🔈";
+            }
+        });
+
+        // Попытка запустить музыку при первом клике по странице (обход автоплея)
+        document.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+                btn.textContent = "STOP MUSIC 🔇";
+            }
+        }, { once: true });
+    </script>
+
 </body>
 </html>

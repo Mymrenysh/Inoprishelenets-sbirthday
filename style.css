@@ -142,3 +142,46 @@ footer {
     font-style: italic; /* Можно добавить курсив для стиля */
     font-weight: bold;  /* И сделать жирным, чтобы выделить */
 }
+footer {
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.music-control {
+    background: none;
+    border: 1px solid #000;
+    padding: 5px 15px;
+    font-family: 'Playfair Display', serif;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.music-control:hover {
+    background: #000;
+    color: #fff;
+}
+
+.footer-msg {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    letter-spacing: 8px;
+    margin-top: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+@media (max-width: 650px) {
+    .article-content { flex-direction: column; }
+    .main-title { font-size: 50px; }
+    .happy-birthday-title { font-size: 38px; }
+    .to-friend-cursive { font-size: 28px; }
+    .newspaper-container { padding: 25px; }
+}
